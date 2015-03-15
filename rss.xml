@@ -24,7 +24,7 @@ layout: null
 			</description>
 			<enclosure url="http://{{ post.guid | prepend: site.baseurl | prepend: site.url }}" length="{{ post.bytelength }}" type="audio/mpeg"/>
 			<category>Podcasts</category>
-			<pubDate>{{ post.date }}</pubDate>
+			<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 		</item>
 		{% endfor %}
 	</channel>
