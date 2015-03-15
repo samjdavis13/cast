@@ -1,5 +1,6 @@
 # Site settings
 title: Sam's Podcast
+realname: Sam Davis
 email: sam@sjd.co
 description: A place where I can upload personal podcasts to take advantage of Overcast's smartspeed!
 baseurl: "" # the subpath of your site, e.g. /blog/
