@@ -14,7 +14,10 @@ layout: null
 		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 		<webMaster>{{ site.email }} ({{ site.realname }})</webMaster>
+		<itunes:image href="http://{{ site.artwork | prepend: site.url }}"/>
 		{% for post in site.posts %}
+		<itunes:explicit>clean</itunes:explicit>
+		<itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
 		<item>
 			<title>{{ post.title | xml_escape }}</title>
 			<link>http://{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
@@ -22,6 +25,7 @@ layout: null
 			<description>
 				{{ post.content | xml_escape }}
 			</description>
+			<itunes:duration>{{ post.duration }}</itunes:duration>
 			<enclosure url="http://{{ post.guid | prepend: site.baseurl | prepend: site.url }}" length="{{ post.bytelength }}" type="audio/mpeg"/>
 			<category>Podcasts</category>
 			<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
