@@ -1,9 +1,11 @@
 # Site settings
-title: Sam's Podcast Site
+title: Sam's Podcast
 email: sam@sjd.co
 description: A place where I can upload personal podcasts to take advantage of Overcast's smartspeed!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "cast.sjd.co" # the base hostname & protocol for your site
+language: en-au
+copyright: © SJD.co 2015. All Rights Reserved.
 
 # Build settings
 markdown: kramdown

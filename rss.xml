@@ -1,18 +1,30 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 	<channel>
-		<title>Sam's Podcast</title>
-		<description>A place where myself (Sam Davis) can upload lectures so that he can take advantage of smart speed in Overcast!</description>
-		<link>http://cast.sjd.co</link>
-		<language>en-au</language>
-		<copyright>© SJD.co 2015. All Rights Reserved.</copyright>
-		<lastBuildDate>Sun, 15 Mar 2015 11:30:00 +1000</lastBuildDate>
-		<pubDate>Sun, 15 Mar 2015 11:30:00 +1000</pubDate>
+		<title>{{ site.title  | xml_escape }}</title>
+		<description>{{ site.description | xml_escape }}</description>
+		<link>http://{{ site.url }}</link>
+		<language>{{ site.language }}</language>
+		<copyright>{{ site.copyright | xml_escape }}</copyright>
+		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
-		<webMaster>sam@sjd.co</webMaster>
-
+		<webMaster>{{ site.email }}</webMaster>
+		{% for post in site.posts %}
 		<item>
-			
+			<title>{{ post.title | xml_escape }}</title>
+			<link>http://{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+			<guid>http://{{ post.guid | prepend: site.baseurl | prepend: site.url }}</guid>
+			<description>
+				{{ post.content | xml_escape }}
+			</description>
+			<enclosure url="http://{{ post.guid | prepend: site.baseurl | prepend: site.url }}" length="{{ post.bytelength }}" type="audio/mpeg"/>
+			<category>Podcasts</category>
+			<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 		</item>
+		{% endfor %}
 	</channel>
 </rss>
