@@ -1,0 +1,11 @@
+---
+layout: podcast
+title: "PDS Lecture 5.1 (Supplementary)"
+date: Tue, 24 Mar 2015 10:46:11
+guid: /files/pds-lecture-5-1.mp3
+bytelength: 10191402
+duration: 0:24:07
+---
+Professional Design Studio - Week 5.1 (Supplementary) Lecture
+
+"Brand Identity Project"
