@@ -2,7 +2,7 @@
 layout: podcast
 title:  "PDS Lecture 5"
 date:   Tue, 24 Mar 2015 10:44:55
-guid: /files/pds-lecture-5-0.mp3
+guid: /files/pds-lecture-05-0.mp3
 bytelength: 14622606
 duration: 0:15:10
 ---

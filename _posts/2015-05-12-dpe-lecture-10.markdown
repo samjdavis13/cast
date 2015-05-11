@@ -1,0 +1,9 @@
+---
+layout: podcast
+title: DPE Lecture 10
+date: Tue, 12 May 2015 08:48:46
+guid: /files/dpe-lecture-10.mp3
+bytelength: 12642983
+duration: 26:20
+---
+Design Professional Engagement - Lecture 10
